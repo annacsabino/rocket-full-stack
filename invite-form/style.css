@@ -1,0 +1,215 @@
+:root {
+  --brand-light: #59b2ff;
+  --brand-dark: #1d6fb6;
+  --brand-mid: #3487cf;
+  --accent-purple: #b259ff;
+  --accent-fuschia: #ff59f9;
+  --accent-pink: #ff598b;
+  --accent-orange: #ff8b59;
+  --accent-yellow: #ffcd59;
+  --accent-lime: #e1ff59;
+  --accent-green: #59ff91;
+  --accent-cyan: #59fff9;
+  --accent-navy: #6a59ff;
+  --feedback-danger: #ff5959;
+  --input-base: #1c1f21;
+  --input-stroke: #363b40;
+  --input-placeholder: #869198;
+  --shape-background: #131516;
+  --shape-body: #212427;
+  --shape-button: #2d3136;
+  --shape-hover: #383d42;
+  --text-body: #c8cdd0;
+  --text-heading: #f9f9f9;
+
+  --font-body: 'Open Sans', sans-serif;
+  --font-logo: 'Leckerli One', cursive;
+  --font-heading: 'Baloo 2', sans-serif;
+
+  --size-logo: 2.5rem;
+  --size-heading-md: 1.75rem;
+  --size-heading-sm: 1.125rem;
+  --size-body-md: 1rem;
+  --size-body-sm: 0.875rem;
+  --size-body-xs: 0.75rem;
+}
+
+body {
+  background-color: var(--shape-background);
+  color: var(--text-body);
+}
+
+label {
+  font-family: var(--font-body);
+  font-size: var(--size-body-md);
+  color: var(--text-body);
+}
+
+input,
+textarea {
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: var(--input-base);
+  color: var(--text-heading);
+  font-family: var(--font-body);
+  font-size: var(--size-body-md);
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--brand-light);
+}
+
+input.error,
+textarea.error {
+  border-color: var(--feedback-danger);
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  background-color: var(--brand-dark);
+  color: var(--text-heading);
+  font-family: var(--font-body);
+  font-size: var(--size-body-md);
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--brand-mid);
+}
+
+button.secondary {
+  background-color: var(--shape-button);
+  padding: 8px 12px;
+  & svg {
+    color: var(--brand-light);
+  }
+}
+
+button.secondary:hover {
+  background-color: var(--shape-hover);
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  & label {
+    cursor: pointer;
+  }
+}
+
+input#checkbox[type='checkbox'] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+}
+
+input:checked#checkbox[type='checkbox'] {
+  border-color: var(--brand-light);
+}
+
+input:checked#checkbox[type='checkbox']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('./assets/icons/check.svg') no-repeat center center;
+  background-size: contain;
+  padding: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border-color: var(--brand-light);
+}
+
+.file-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  #file-button {
+    background-color: var(--shape-button);
+    font-size: var(--size-body-sm);
+    & svg {
+      color: var(--brand-light);
+      width: 16px;
+      height: 16px;
+    }
+  }
+  & .file-name {
+    font-family: var(--font-body);
+    font-size: var(--size-body-md);
+    color: var(--input-placeholder);
+  }
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  & label {
+    color: var(--text-heading);
+  }
+  input#toggle[type='checkbox'] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 64px;
+    height: 32px;
+    border-radius: 99px;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--input-stroke);
+      transform: translateY(-50%);
+      transition: left 0.2s ease-in-out;
+    }
+    &:checked {
+      background-color: var(--brand-light);
+      &::before {
+        left: 36px;
+        background-color: var(--text-heading);
+      }
+    }
+  }
+}
