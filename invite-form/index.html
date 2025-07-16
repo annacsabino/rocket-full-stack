@@ -11,41 +11,350 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Leckerli+One&family=Open+Sans:wght@300..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.svg"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <div class="form-wrapper">
-      <input type="text" placeholder="Placeholder" />
-      <textarea name="" placeholder="Placeholder" id=""></textarea>
-      <button>Label</button>
-      <button class="secondary">Label</button>
-      <div class="checkbox-wrapper">
-        <input id="checkbox" type="checkbox" />
-        <label for="checkbox">Text</label>
+    <div class="page-wrapper">
+      <div class="invite-bg">
+        <img src="./assets/images/logo.svg" alt="" />
+        <h1>Festive</h1>
+        <p>Crie um convite digital para o seu evento</p>
       </div>
-      <div class="file-wrapper">
-        <input type="file" id="file-input" hidden="hidden" />
-        <button type="button" id="file-button">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M15.2929 3.29289C15.6834 2.90237 16.3166 2.90237 16.7071 3.29289L23.3738 9.95956C23.7643 10.3501 23.7643 10.9832 23.3738 11.3738C22.9832 11.7643 22.3501 11.7643 21.9596 11.3738L17 6.41421V20C17 20.5523 16.5523 21 16 21C15.4477 21 15 20.5523 15 20V6.41421L10.0404 11.3738C9.64992 11.7643 9.01675 11.7643 8.62623 11.3738C8.2357 10.9832 8.2357 10.3501 8.62623 9.95956L15.2929 3.29289ZM4 19C4.55228 19 5 19.4477 5 20V25.3333C5 25.7754 5.17559 26.1993 5.48816 26.5118C5.80072 26.8244 6.22464 27 6.66667 27H25.3333C25.7754 27 26.1993 26.8244 26.5118 26.5118C26.8244 26.1993 27 25.7754 27 25.3333V20C27 19.4477 27.4477 19 28 19C28.5523 19 29 19.4477 29 20V25.3333C29 26.3058 28.6137 27.2384 27.9261 27.9261C27.2384 28.6137 26.3058 29 25.3333 29H6.66667C5.69421 29 4.76157 28.6137 4.07394 27.9261C3.38631 27.2384 3 26.3058 3 25.3333V20C3 19.4477 3.44772 19 4 19Z"
-              fill="currentColor"
-            />
-          </svg>
-          Upload
-        </button>
-        <span class="file-name">Nenhum arquivo selecionado</span>
-      </div>
-      <div class="toggle-wrapper">
-        <input id="toggle" type="checkbox" />
-        <label for="toggle" id="toggle-label">Escuro</label>
+      <div class="form-wrapper">
+        <div class="form-content">
+          <h2 class="title">Crie seu convite</h2>
+          <div class="content-form">
+            <!-- Sobre o evento -->
+            <div>
+              <div class="subtitle">
+                <img src="./assets/icons/calendar.svg" alt="" />
+                <h3>Sobre o evento</h3>
+              </div>
+              <div class="event-wrapper">
+                <div class="input-wrapper">
+                  <label for="">Título</label>
+                  <input type="text" placeholder="Nome do evento" />
+                </div>
+                <div class="group-inputs">
+                  <div class="input-wrapper">
+                    <label for="">Início</label>
+                    <input type="text" placeholder="DD/MM/AAAA, --:--" />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="">Fim</label>
+                    <input type="text" placeholder="DD/MM/AAAA, --:--" />
+                  </div>
+                </div>
+                <div class="group-inputs">
+                  <div class="input-wrapper">
+                    <label for="">Tipo</label>
+                    <div class="segment-control">
+                      <div class="segment-control-button active">
+                        <img src="./assets/icons/building.svg" alt="" />
+                        <p>Presencial</p>
+                      </div>
+                      <div class="segment-control-button">
+                        <img src="./assets/icons/video.svg" alt="" />
+                        <p>Online</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="">Local</label>
+                    <input type="text" placeholder="Link ou endereço" />
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="">Descrição</label>
+                  <textarea
+                    rows="5"
+                    placeholder="Escreva sobre os detalhes do evento"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personalização -->
+            <div>
+              <div class="subtitle">
+                <img src="./assets/icons/paintbrush-vertical.svg" alt="" />
+                <h3>Personalização</h3>
+              </div>
+              <div class="event-wrapper">
+                <div class="input-wrapper">
+                  <label for="">Cor principal</label>
+                  <div class="radio-wrapper">
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-1"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-2"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-3"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-4"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-5"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-6"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-7"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-8"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-9"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-10"
+                    />
+                    <input
+                      class="radio-input"
+                      type="radio"
+                      name="radio"
+                      id="radio-11"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="theme-selection-wrapper">
+                <label>Tema do evento</label>
+                <div class="theme-selection-card-wrapper">
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/birthday.png"
+                        alt="Imagem de um bolo de Aniversário"
+                      />
+                    </div>
+                    <p>Aniversário</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/kids.png"
+                        alt="Imagem de uma festa com coisas coloridas em cima de uma mesa"
+                      />
+                    </div>
+                    <p>Infantil</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/graduation.png"
+                        alt="Imagem de uma beca de formatura"
+                      />
+                    </div>
+                    <p>Formatura</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/wedding.png"
+                        alt="Imagem de uma aliança de casamento"
+                      />
+                    </div>
+                    <p>Casamento</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/baby-shower.png"
+                        alt="Imagem de uma flor e um lenço de bebê"
+                      />
+                    </div>
+                    <p>Chá de bebê</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/pot-tea.png"
+                        alt="Imagem de uma cozinha"
+                      />
+                    </div>
+                    <p>Chá de panela</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/carnival.png"
+                        alt="Imagem de mascaras de carnaval"
+                      />
+                    </div>
+                    <p>Carnaval</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/easter.png"
+                        alt="Imagem de um coelinho de pascoa"
+                      />
+                    </div>
+                    <p>Páscoa</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/saint-john.png"
+                        alt="Imagem de várias bandeirinhas de São João"
+                      />
+                    </div>
+                    <p>São João</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/halloween.png"
+                        alt="Imagem de abobóras de halloween"
+                      />
+                    </div>
+                    <p>Halloween</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/christmas.png"
+                        alt="Imagem de presente de natal"
+                      />
+                    </div>
+                    <p>Natal</p>
+                  </div>
+                  <div class="theme-selection-card">
+                    <div class="theme-selection-image">
+                      <img
+                        src="./assets/images/theme-card-selection/other.png"
+                        alt="Imagem de várias mãos formando um circulo"
+                      />
+                    </div>
+                    <p>Outro</p>
+                  </div>
+                </div>
+              </div>
+              <div class="group-inputs-personalizations">
+                <div class="input-wrapper">
+                  <p class="label-text">Estilo</p>
+                  <div class="toggle-wrapper">
+                    <input id="toggle" type="checkbox" />
+                    <label for="toggle" id="toggle-label">Escuro</label>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <p class="label-text">Estilo</p>
+                  <div class="file-wrapper">
+                    <input type="file" id="file-input" hidden="hidden" />
+                    <button type="button" id="file-button">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.2929 3.29289C15.6834 2.90237 16.3166 2.90237 16.7071 3.29289L23.3738 9.95956C23.7643 10.3501 23.7643 10.9832 23.3738 11.3738C22.9832 11.7643 22.3501 11.7643 21.9596 11.3738L17 6.41421V20C17 20.5523 16.5523 21 16 21C15.4477 21 15 20.5523 15 20V6.41421L10.0404 11.3738C9.64992 11.7643 9.01675 11.7643 8.62623 11.3738C8.2357 10.9832 8.2357 10.3501 8.62623 9.95956L15.2929 3.29289ZM4 19C4.55228 19 5 19.4477 5 20V25.3333C5 25.7754 5.17559 26.1993 5.48816 26.5118C5.80072 26.8244 6.22464 27 6.66667 27H25.3333C25.7754 27 26.1993 26.8244 26.5118 26.5118C26.8244 26.1993 27 25.7754 27 25.3333V20C27 19.4477 27.4477 19 28 19C28.5523 19 29 19.4477 29 20V25.3333C29 26.3058 28.6137 27.2384 27.9261 27.9261C27.2384 28.6137 26.3058 29 25.3333 29H6.66667C5.69421 29 4.76157 28.6137 4.07394 27.9261C3.38631 27.2384 3 26.3058 3 25.3333V20C3 19.4477 3.44772 19 4 19Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      Selecionar
+                    </button>
+                    <span class="file-name">Nenhum arquivo selecionado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dados para contato -->
+            <div>
+              <div class="subtitle">
+                <img src="./assets/icons/contact.svg" alt="" />
+                <h3>Dados para contato</h3>
+              </div>
+              <div class="contact-wrapper">
+                <div class="input-wrapper">
+                  <label for="">Nome</label>
+                  <input type="text" placeholder="Nome completo" />
+                </div>
+                <div class="group-inputs">
+                  <div class="input-wrapper">
+                    <label for="">E-mail</label>
+                    <input type="email" placeholder="exemplo@email.com" />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="">Telefone</label>
+                    <input type="text" placeholder="(99) 99999-9999" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox" checked />
+                <label for="checkbox"
+                  >Li e concordo com os <a href="#">Termos e Condições</a> e com
+                  a <a href="#">Política de Privacidade</a></label
+                >
+              </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox" />
+                <label for="checkbox"
+                  >Aceito receber atualizações e promoções por e-mail</label
+                >
+              </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox" />
+                <label for="checkbox"
+                  >Aceito receber atualizações e promoções por SMS</label
+                >
+              </div>
+              <a class="button">
+                <img src="./assets/icons/ticket.svg" alt="" class="icon" />
+                Gerar convite
+              </a>
+            </footer>
+          </div>
+        </div>
       </div>
     </div>
     <script type="module" src="script.js"></script>
